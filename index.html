@@ -2,10 +2,18 @@
 
 <head>
 
+     <!-- Favicon -->
+    <link rel="icon" href="./assets/NC-Logo.ico" type="image/x-icon">
+
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Google Font CDN (placeholder) -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
+    <link href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet">
 
     <!-- Local Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -17,44 +25,106 @@
 <body>
 
     <header>
-        <h1>This will be the title of the page</h1>
-    </header>
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1 headerH1">Jim Faulkner | JavaScript Quiz</span>
+          </nav>    </header>
+  
+    <div class="introBox">
+        <h1>Welcome to my JavaScript quiz!</h1>
+        <p>In a minute, you'll be asked ten different questions regarding general JavaScript.  There are four answer choices for each question, just click on the one that you think is correct!  There are a couple of things to know:</p>
+        <ul>
+            <li><strong>Timer!</strong>  This is a timed quiz.  You'll have approximately 100 seconds to answer the questions given to you.</li>
+            <li><strong>Scoring!</strong>  You will receive points for each question that you answer correctly.  The more time that's remaining when you correctly answer a question, the more points that answer will be worth!  Additionally, it's important to know that you can lose time by selecting the wrong answer.</li>
+        </ul>
 
-    <div class="jumbotron">
-        <h2>Here is a question sample?</h2>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-            <label class="form-check-label" for="exampleRadios1">
-            First Answer
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-            Second answer
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-            Third answer
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-            <label class="form-check-label" for="exampleRadios2">
-            Fourth answer
-            </label>
-        </div>
-        <button type="button" class="btn btn-outline-dark">Submit Answer</button>
+        <p>Click the button below to get started.  Make sure you're ready!  The timer starts as soon as you click!</p>
+
+        <button type="button" class="btn btn-link btn-lg startBtn">Fire up the quiz!</button>
     </div>
-    <div>
-        <h3>Here is what will pop up letting you know that your answer is right/wrong</h3>
-        <button type="button" class="btn btn-outline-dark">This will load the next question</button>
+    <div class="bkgd"></div>
+    <div class="container">  
+        <div class="row rowQuestion">
+            <div class="col-md-12">
+                <h2 id="questionCurrent">This will be the question that populates once I get the function right.  I wonder how many characters I can have here while keeping the font size what it is currently?</h2>
+            </div>
+        </div>
+        <div class="row rowAnswer">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer a">just some placeholder text</button>
+            </div>  
+            <div class="col-md-6">
+                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer c">just some placeholder text</button>
+            </div> 
+        </div> 
+        <div class="row rowAnswer">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer b">just some placeholder text</button>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer d">just some placeholder text</button> 
+            </div>
+        </div>
+        <div class="row rowStats">
+            <div class="col-md-6">
+                <h3 id="outcome">just some placeholder text</h3>
+            </div>
+            <div class="col-md-3 labelBox">
+                <div>
+                    <h4>Score:</h4>
+                </div>
+                <div>
+                    <h4>Time:</h4>      
+                </div>     
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <p class = "scoreBoard"><p>
+                </div>
+                <div>
+                    <p class="timeLeft"></p>      
+                </div>     
+            </div>
+        </div>
+            
     </div>
-    <div>
-        <h4>This will be a timer!</h4>
-    </div>
+
+    <footer>
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-bottom navbar-custom navbar-index">
+        
+          <!-- Toggler for responsiveness -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#footerBar" aria-controls="navbarNav" aria-expanded="false" 
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon footer-toggler-icon"></span>
+          </button>
+    
+          <!-- Nav items with links to other pages on the site -->
+          <!-- Credit to icons: https://fontawesome.bootstrapcheatsheets.com/# -->
+          <div class="collapse navbar-collapse justify-content-end" id="footerBar">
+            <ul class="navbar-nav d-flex align-items-end footer-nav">
+              <li class="nav-item"><h5>Jim Faulkner | 2020 |</h5>
+              </li>
+              <li class="nav-item">
+                <a href="https://jhf1203.github.io" target="_blank" 
+                class="btn btn-sm" role="button" aria-pressed="true"> 
+                <i class="fa fa-user"></i></a>
+              </li>        
+              <li class="nav-item">
+                <a href="https://www.linkedin.com/in/jim-faulkner-13476534" target="_blank" 
+                class="btn btn-sm" role="button" aria-pressed="true"> 
+                <i class="fa fa-linkedin-square"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="https://github.com/jhf1203" target="_blank" 
+                class="btn btn-sm" role="button" aria-pressed="true"> 
+                <i class="fa fa-github"></i></a>
+              </li>         
+            </ul>
+          </div>
+        </nav>
+      </footer>
+    
+    
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"

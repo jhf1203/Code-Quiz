@@ -1,0 +1,236 @@
+header {
+
+    height:0px;
+}
+
+h1 {
+
+    font-size:36px;
+    text-align:center;
+    color:#201b1f;
+    font-weight:450;
+
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight:450;
+
+}
+
+
+h2 {
+
+    font-size:24px;
+    text-align: justify;
+}
+
+h3 {
+
+    font-size:24px;
+}
+
+h4 {
+    font-size:18px;
+}
+
+
+h5 {
+
+    font-size:12px;
+}
+
+footer  {
+
+    padding-right:43px;
+}
+
+.bkgd {
+
+    /* Positioning */
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    min-width: 100%;
+    min-height: 120%;
+    position:fixed;
+    
+    /*Aesthetic */
+    background-image: url("./Assets/Roulette.jpg"); 
+    opacity:0.15;
+  }
+
+
+.headerH1 {
+
+    font-size:12px;
+
+}
+
+.navbar {
+
+    padding-left:75px;
+}
+
+.navbar-brand {
+
+    padding-bottom:10px;
+
+}
+
+.introBox {
+
+    position:fixed;
+    height:90%;
+    width:90%;
+    z-index:2;
+    background-color: white;
+    border:2px solid #201b1f;
+    border-radius:5px;
+    margin-left:5%;
+    padding-left:17%;
+    padding-right:17%;
+    padding-top:6%;
+    margin-top:45px;
+}
+
+.startBtn {
+
+    font-size:18px;
+}
+
+
+.startBtn:hover {
+
+    background-color:#D66B35;
+
+}
+
+.container {
+
+    width:90%;
+    height:90%;
+    background-color:white;
+    padding:30px;
+    border: 2px solid #201b1f;
+    border-radius:5px;
+    opacity:0.8;
+    margin-top:70px;
+}
+
+
+.row {
+
+    height: 75px;
+    margin: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #201b1f;
+    background-color:white;
+    opacity:0.8;
+    padding-top:10px;
+    padding-bottom:10px;
+    align-items:center;
+    text-align:center;
+
+
+    
+}
+
+.rowQuestion
+.rowStats {
+
+    height:60px;
+}
+
+.rowAnswer {
+
+    border:none;
+}
+
+.col-md-3
+.col-md-6
+.col-md-12 {
+
+    padding:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.col-md-12 {
+
+    text-align:center;
+
+}
+
+.col-md-2 {
+
+    text-align: left;
+    padding-bottom:15px;
+}
+
+.btn-link {
+
+    color:#201b1f;
+    border-radius:5px;
+    border: 2px solid #201b1f;
+    font-size:18px;
+    width:100%;
+}
+
+.btn-link:hover {
+
+    color:#201b1f;
+    text-decoration:none;
+    font-weight:600;
+
+
+}
+
+
+
+.a:hover {
+
+    background-color:#A92521
+}
+
+
+.b:hover {
+
+    background-color:#fce879;
+
+}
+
+.c:hover {
+
+    background-color:#57876F
+
+}
+
+.d:hover {
+
+    background-color:#16408A;
+
+}
+
+.labelBox {
+
+    text-align:right;
+    padding-bottom:15px;
+   
+
+}
+
+.timeLeft
+.scoreBoard {
+
+    text-align:left;
+}
+
+#questionCurrent {
+
+    text-align:center;
+    
+}

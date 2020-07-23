@@ -131,7 +131,7 @@ var quiz = [
 
 // This is the function that begins the timer, and also manages when the user is redirected if time expires
 function timeLeftFunc() {
-    setInterval(function() {
+    setInterval(function(keepTime) {
       timer--;
       $(".timeLeftSpot").html(timer);
 
@@ -143,6 +143,7 @@ function timeLeftFunc() {
         $(".introOutroUL").remove();
         $(".introOnlyP").remove();
         $(".introOutro").append(reStartBtn);
+        
     };  
     }, 1000);
 }
@@ -158,6 +159,7 @@ function nextQuestion() {
         $(".d").html(quiz[currentQ].answerD);      
     } else { 
         $(".introOutro").show();
+        clearInterval(keepTime);
         $(".introOutroH1").html("All Done!");
         $(".introOutroP").html("Thank you for taking my quiz!  Your total score was " + score + 
                              ".  Enter your name below to be forever enshrined into the hall of amazing!")
@@ -174,10 +176,13 @@ function nextQuestion() {
 scoreFormSubmit.on("click", function(event) {
 
     event.preventDefault();
-    var name = $(".name-submit").val();
     $(".introOutroP").hide();
-    localStorage.setItem("Name", name);
-    localStorage.setItem("Score", score);
+    var name = $(".name-submit").val();
+    var quizObj = {
+        player: name,
+        finalScore: score
+    }
+    localStorage.setItem("Previous Quiz", JSON.stringify(quizObj));
     scoreForm.hide();
     $(".introOutro").append(thankyouText, bioLink, reStartBtn);
 });

@@ -162,7 +162,7 @@ function nextQuestion() {
         clearInterval(keepTime);
         $(".introOutroH1").html("All Done!");
         $(".introOutroP").html("Thank you for taking my quiz!  Your total score was " + score + 
-                             ".  Enter your name below to be forever enshrined into the hall of amazing!")
+                             ".  Enter your name below to record your score!")
         $(".introOutroUL").remove();
         $(".introOnlyP").remove();
         $(".introOutro").append(scoreForm);

@@ -138,7 +138,8 @@ function timeLeftFunc() {
       if (timer < 0) {
         $(".introOutro").show();
         $(".introOutroH1").html("Uh Oh!");
-        $(".introOutroP").html("Looks like you ran out of time.  Your total score was " + score + ".  Give it another whirl!")
+        $(".introOutroP").html("Looks like you ran out of time.  Your total score was " + score + 
+                                ".  Give it another whirl!")
         $(".introOutroUL").remove();
         $(".introOnlyP").remove();
         $(".introOutro").append(reStartBtn);
@@ -158,7 +159,8 @@ function nextQuestion() {
     } else { 
         $(".introOutro").show();
         $(".introOutroH1").html("All Done!");
-        $(".introOutroP").html("Thank you for taking my quiz!  Your total score was " + score + ".  Enter your name below to be forever enshrined into the hall of amazing!")
+        $(".introOutroP").html("Thank you for taking my quiz!  Your total score was " + score + 
+                             ".  Enter your name below to be forever enshrined into the hall of amazing!")
         $(".introOutroUL").remove();
         $(".introOnlyP").remove();
         $(".introOutro").append(scoreForm);
@@ -185,13 +187,15 @@ scoreFormSubmit.on("click", function(event) {
 $('.btnAnswer').on('click', function() {
 
     if (quiz[currentQ].correct ===  $(this).attr('name')) {
-        $(".outcome").html("Correct!  Nice job!").attr("style", "color:#57876F");
+        $(".outcome").html("Correct!  Nice job!")
+                    .attr("style", "color:#57876F");
         score = (score + 10 + timer);
         currentQ++;
         nextQuestion();
         $(".scoreBoard").html(score);      
     } else {
-        $(".outcome").html("Sorry, wrong answer").attr("style", "color:#A92521");
+        $(".outcome").html("Sorry, wrong answer")
+                    .attr("style", "color:#A92521");
         timer = timer - 10;
         currentQ++;
         nextQuestion();

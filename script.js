@@ -2,12 +2,6 @@
 // This is the button that navigates the user from the welcome screen into the actual quiz.
 var startBtn = $(".startBtn"); 
 
-// These variables house choices a-d for the quiz answers
-var btnAnswerA = $(".a");
-var btnAnswerB = $(".b");
-var btnAnswerC = $(".c");
-var btnAnswerD = $(".d");
-
 // This sets the initial timer at 100.
 var timer = 100;
 
@@ -141,14 +135,14 @@ function timeLeftFunc() {
       timer--;
       $(".timeLeftSpot").html(timer);
 
-    //   if (timer < 0) {
-    //     $(".introOutro").show();
-    //     $(".introOutroH1").html("Uh Oh!");
-    //     $(".introOutroP").html("Looks like you ran out of time.  Your total score was " + score + ".  Give it another whirl!")
-    //     $(".introOutroUL").remove();
-    //     $(".introOnlyP").remove();
-    //     $(".introOutro").append(reStartBtn);
-    // };  
+      if (timer < 0) {
+        $(".introOutro").show();
+        $(".introOutroH1").html("Uh Oh!");
+        $(".introOutroP").html("Looks like you ran out of time.  Your total score was " + score + ".  Give it another whirl!")
+        $(".introOutroUL").remove();
+        $(".introOnlyP").remove();
+        $(".introOutro").append(reStartBtn);
+    };  
     }, 1000);
 }
 

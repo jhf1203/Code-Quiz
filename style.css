@@ -245,8 +245,8 @@ footer  {
 }
 
 
-/* ____________________________
-Below is where I house all of the :hover rules */
+/*  ____________________________
+    Below is where I house all of the :hover rules */
 
 .startBtn:hover {
 
@@ -308,7 +308,83 @@ Below is where I house all of the :hover rules */
 }
 
 
+/*  ____________________________
+    Optimizing for tablet */
 
+    @media only screen and (max-width:768px) {
+
+    h2
+    h3 {
+
+        font-size:20px;
+    }
+}
+
+/*  ____________________________
+    Optimizing for mobile phones */
+
+@media only screen and (max-width:425px) {
+
+    ul
+    li {
+
+        /* Typography */
+        font-size:12px;
+    }
+
+    .introOutro {
+
+        /* Box-Model */
+        padding-left:5px;
+        padding-right:44px;
+
+        /* Positioning */
+        width:300px;
+    }
+
+    .introOutroH1 {
+
+        /* Typography */
+        font-size:20px;
+    }
+
+    .rowAnswer {
+
+        /* Positioning */
+        height:145px;
+    }
+
+    .labelBox {
+
+        /* Positioning */
+        width:115px;
+    }
+
+    .col-md-2 {
+
+        /* Positioning */
+        width:115px;
+    }
+
+    .outcome {
+
+        /* Typography */
+        font-size:18px;
+    }
+
+    .rowStats {
+
+        /* Positioning */
+        height:135px;
+    }
+
+    .btn-link {
+
+        /* Typography */
+        font-size:12px;
+    }
+
+}
 
 
 

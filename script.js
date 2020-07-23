@@ -39,7 +39,7 @@ var bioLink = $("<a>")
 
 // This is the button option to restart the quiz.
 var reStartBtn = $("<a>")
-                        .attr("href", "https://jhf1203.github.io/code-quiz")
+                        .attr("href", "https://jhf1203.github.io/Code-Quiz/")
                         .html("Play again!")
                         .attr("class", "btn btn-link restart")
 

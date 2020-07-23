@@ -1,10 +1,12 @@
 header {
 
+    /* Positioning */
     height:0px;
 }
 
 h1 {
 
+    /* Typography */
     font-size:36px;
     text-align:center;
     color:#201b1f;
@@ -12,38 +14,42 @@ h1 {
 
 }
 
-
 body {
 
+    /* Typography */
     font-family: 'Montserrat', sans-serif;
     font-weight:450;
 
 }
 
-
 h2 {
-
+  
+    /* Typography */
     font-size:24px;
     text-align: justify;
 }
 
 h3 {
-
+   
+    /* Typography */
     font-size:24px;
 }
 
 h4 {
+  
+    /* Typography */
     font-size:18px;
 }
 
-
 h5 {
 
+    /* Typography */
     font-size:12px;
 }
 
 footer  {
 
+    /* Box-Model */
     padding-right:43px;
 }
 
@@ -60,93 +66,125 @@ footer  {
     /*Aesthetic */
     background-image: url("./Assets/Roulette.jpg"); 
     opacity:0.15;
-  }
-
+}
 
 .headerH1 {
 
+    /* Typography */
     font-size:12px;
-
 }
 
 .navbar {
 
+    /* Box-Model */
     padding-left:75px;
 }
 
 .navbar-brand {
 
+    /* Box-Model */
     padding-bottom:10px;
-
 }
 
 .introOutro {
+    
+    /* Box-Model */
+    margin-left:5%;
+    margin-top:45px;
+    border:2px solid #201b1f;
+    border-radius:5px;
+    padding-left:17%;
+    padding-right:17%;
+    padding-top:6%;
 
+    /* Positioning */
     position:fixed;
     height:90%;
     width:90%;
     z-index:2;
+
+    /* Aesthetic */
     background-color: white;
-    border:2px solid #201b1f;
-    border-radius:5px;
-    margin-left:5%;
-    padding-left:17%;
-    padding-right:17%;
-    padding-top:6%;
-    margin-top:45px;
+
 }
 
 .startBtn {
 
+    /* Typography */
     font-size:18px;
 }
 
 
-.startBtn:hover {
+.btn-link {
 
-    background-color:#D66B35;
+    /* Box-Model */
+    border-radius:5px;
+    border: 2px solid #201b1f;
 
+    /* Positioning */
+    width:100%;
+
+    /* Typography */
+    color:#201b1f;
+    font-size:18px;
 }
+
 
 .container {
 
-    width:90%;
-    height:90%;
-    background-color:white;
-    padding:30px;
+    /* Box-Model */
+    margin-top:70px;
     border: 2px solid #201b1f;
     border-radius:5px;
-    opacity:0.8;
-    margin-top:70px;
-}
+    padding:30px;
 
+    /* Positioning */
+    width:90%;
+    height:90%;
+
+    /* Aesthetic */
+    background-color:white;
+    opacity:0.8;
+}
 
 .row {
 
-    height: 75px;
+    /* Box-Model */
     margin: 20px;
     border-style: solid;
     border-radius: 5px;
     border-color: #201b1f;
-    background-color:white;
-    opacity:0.8;
     padding-top:10px;
     padding-bottom:10px;
+
+    /* Positioning */
+    height: 75px;
     align-items:center;
-    text-align:center;
 
+    /* Typography */
+    text-align:center;  
 
-    
+    /* Aesthetic */
+    background-color:white;
+    opacity:0.8;
 }
 
 .rowQuestion
 .rowStats {
 
+    /* Positioning */
     height:60px;
+}
+
+.questionCurrent {
+
+    /* Typography */
+    text-align:center;  
 }
 
 .rowAnswer {
 
+    /* Box-Model */
     border:none;
 }
 
@@ -154,6 +192,7 @@ footer  {
 .col-md-6
 .col-md-12 {
 
+    /* Box-Model */
     padding:5px;
     margin-top:5px;
     margin-bottom:5px;
@@ -161,76 +200,117 @@ footer  {
 
 .col-md-12 {
 
+    /* Typography */
     text-align:center;
-
 }
 
 .col-md-2 {
 
+    /* Box-Model */
+    padding-bottom:32px;
+
+    /* Typography */
     text-align: left;
-    padding-bottom:15px;
 }
 
-.btn-link {
+.outcome {
 
-    color:#201b1f;
-    border-radius:5px;
-    border: 2px solid #201b1f;
-    font-size:18px;
-    width:100%;
-}
+    /* Box-Model */
+    padding-bottom:30px;
 
-.btn-link:hover {
-
-    color:#201b1f;
-    text-decoration:none;
+    /* Typography */
     font-weight:600;
-
-
-}
-
-
-
-.a:hover {
-
-    background-color:#A92521
-}
-
-
-.b:hover {
-
-    background-color:#fce879;
-
-}
-
-.c:hover {
-
-    background-color:#57876F
-
-}
-
-.d:hover {
-
-    background-color:#16408A;
-
 }
 
 .labelBox {
 
-    text-align:right;
-    padding-bottom:15px;
-   
+    /* Box-Model */
+    padding-bottom:35px;
 
+    /* Typography */
+    text-align:right;
 }
 
 .timeLeft
 .scoreBoard {
 
+    /* Typography */
     text-align:left;
 }
 
-#questionCurrent {
+.restart {
 
-    text-align:center;
-    
+    /* Box-Model */
+    margin-top:10px;
 }
+
+
+/* ____________________________
+Below is where I house all of the :hover rules */
+
+.startBtn:hover {
+
+    /* Aesthetic */
+    background-color:#D66B35;
+}
+
+
+.btn-link:hover {
+
+    /* Typography */
+    color:#201b1f;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+.a:hover {
+
+    /* Aesthetic */
+    background-color:#A92521
+}
+
+
+.b:hover {
+    
+    /* Aesthetic */
+    background-color:#fce879;
+}
+
+.c:hover {
+
+    /* Aesthetic */
+    background-color:#57876F
+}
+
+.d:hover {
+
+    /* Aesthetic */
+    background-color:#16408A;
+}
+
+.score-submit:hover {
+
+    /* Aesthetic */
+    background-color:#7F8988
+}
+
+.restart:hover {
+
+    /* Aesthetic */
+    background-color:#92344E
+}
+
+.bio-link:hover {
+
+    /* Aesthetic */
+    background-color:#64937D
+}
+
+
+
+
+
+
+
+

@@ -24,11 +24,14 @@
 
 <body>
 
+    <!-- This header is intentionally small since we have a welcome screen that populates on this page -->
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <span class="navbar-brand mb-0 h1 headerH1">Jim Faulkner | JavaScript Quiz</span>
-          </nav>    </header>
+          </nav>    
+    </header>
   
+    <!-- Welcome screen outlining the game -->
     <div class="introOutro">
         <h1 class="introOutroH1">Welcome to my JavaScript quiz!</h1>
         <p class="introOutroP">In a minute, you'll be asked ten different questions regarding general JavaScript.  There are four answer choices for each question, just click on the one that you think is correct!  There are a couple of things to know:</p>
@@ -41,32 +44,36 @@
 
         <button type="button" class="btn btn-link btn-lg startBtn">Fire up the quiz!</button>
     </div>
+
+    <!-- This image serves as the page background.  It is called "Roulette" by Jacob Ouillette -->
     <div class="bkgd"></div>
+
+    <!-- Container to house the quiz -->
     <div class="container">  
         <div class="row rowQuestion">
             <div class="col-md-12">
-                <h2 id="questionCurrent">This will be the question that populates once I get the function right.  I wonder how many characters I can have here while keeping the font size what it is currently?</h2>
+                <h2 class="questionCurrent"></h2>
             </div>
         </div>
         <div class="row rowAnswer">
             <div class="col-md-6">
-                <button name="A" type="button" class="btn btn-link btn-lg shadow-none btnAnswer a">just some placeholder text</button>
+                <button name="A" type="button" class="btn btn-link btn-lg shadow-none btnAnswer a"></button>
             </div>  
             <div class="col-md-6">
-                <button type="button"  name="C" class="btn btn-link btn-lg shadow-none btnAnswer c">just some placeholder text</button>
+                <button type="button"  name="C" class="btn btn-link btn-lg shadow-none btnAnswer c"></button>
             </div> 
         </div> 
         <div class="row rowAnswer">
             <div class="col-md-6">
-                <button  name="B" type="button" class="btn btn-link btn-lg shadow-none btnAnswer b">just some placeholder text</button>
+                <button  name="B" type="button" class="btn btn-link btn-lg shadow-none btnAnswer b"></button>
             </div>
             <div class="col-md-6">
-                <button  name="D" type="button" class="btn btn-link btn-lg shadow-none btnAnswer d">just some placeholder text</button> 
+                <button  name="D" type="button" class="btn btn-link btn-lg shadow-none btnAnswer d"></button> 
             </div>
         </div>
         <div class="row rowStats">
             <div class="col-md-6">
-                <h3 id="outcome">just some placeholder text</h3>
+                <h3 class="outcome"></h3>
             </div>
             <div class="col-md-3 labelBox">
                 <div>
@@ -78,16 +85,18 @@
             </div>
             <div class="col-md-2">
                 <div>
-                    <p class ="scoreBoard"><p>
+                    <h4 class ="scoreBoard"></h4>
                 </div>
                 <div>
-                    <p class="timeLeftSpot"></p>      
+                    <h4 class="timeLeftSpot"></h4>      
                 </div>     
             </div>
         </div>
             
     </div>
 
+
+    <!-- This is my universal footer that lives in my projects that will be going into my portfolio -->
     <footer>
         <nav class="navbar navbar-expand-sm navbar-dark sticky-bottom navbar-custom navbar-index">
         
@@ -98,7 +107,7 @@
           <span class="navbar-toggler-icon footer-toggler-icon"></span>
           </button>
     
-          <!-- Nav items with links to other pages on the site -->
+          <!-- Nav items with external links -->
           <!-- Credit to icons: https://fontawesome.bootstrapcheatsheets.com/# -->
           <div class="collapse navbar-collapse justify-content-end" id="footerBar">
             <ul class="navbar-nav d-flex align-items-end footer-nav">

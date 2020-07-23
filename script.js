@@ -22,7 +22,7 @@ var currentQ = 0;
 
 // This is the input for the user to submit their information to storage
 var scoreFormSubmit = $("<button>")
-                        .attr("class", "btn ptn-primary score-submit")
+                        .attr("class", "btn btn-link score-submit answerBtn")
                         .attr("type", "submit")
                         .html("submit");
 
@@ -89,7 +89,7 @@ var quiz = [
         answerA: "$",
         answerB: ".html",
         answerC: ".attr",
-        answerD: ".text",
+        answerD: ".append",
         correct: "B"
     },
     {
@@ -112,7 +112,7 @@ var quiz = [
         question: "When should you use 'innerHTML' instead of 'textContent' when modifying an element?",
         answerA: "If you need for the content to be a specific color",
         answerB: "If you need more SEO visibility",
-        answerC: "If you are creating a <div> within the element",
+        answerC: "If you are adding HTML to the element",
         answerD: "It doesn't matter, these are one in the same",
         correct: "C"
     },
@@ -141,14 +141,14 @@ function timeLeftFunc() {
       timer--;
       $(".timeLeftSpot").html(timer);
 
-      if (timer < 0) {
-        $(".introOutro").show();
-        $(".introOutroH1").html("Uh Oh!");
-        $(".introOutroP").html("Looks like you ran out of time.  Your total score was " + score + ".  Give it another whirl!")
-        $(".introOutroUL").remove();
-        $(".introOnlyP").remove();
-        $(".introOutro").append(reStartBtn);
-    };  
+    //   if (timer < 0) {
+    //     $(".introOutro").show();
+    //     $(".introOutroH1").html("Uh Oh!");
+    //     $(".introOutroP").html("Looks like you ran out of time.  Your total score was " + score + ".  Give it another whirl!")
+    //     $(".introOutroUL").remove();
+    //     $(".introOnlyP").remove();
+    //     $(".introOutro").append(reStartBtn);
+    // };  
     }, 1000);
 }
 
@@ -156,7 +156,7 @@ function timeLeftFunc() {
 // This function populates the questions and answers into the appropriate area on the quiz.  Once all ten questions have been answered, it then redirects the user to a window allowing them to enter their name to save their score in local storage.
 function nextQuestion() {
     if (currentQ < 10) {
-        $("#questionCurrent").html(quiz[currentQ].question);
+        $(".questionCurrent").html(quiz[currentQ].question);
         $(".a").html(quiz[currentQ].answerA);
         $(".b").html(quiz[currentQ].answerB);
         $(".c").html(quiz[currentQ].answerC);
@@ -164,7 +164,7 @@ function nextQuestion() {
     } else { 
         $(".introOutro").show();
         $(".introOutroH1").html("All Done!");
-        $(".introOutroP").html("Thank you for taking my quiz!  Your total score was " + score + ".  Enter your name below to see how you stacked up!")
+        $(".introOutroP").html("Thank you for taking my quiz!  Your total score was " + score + ".  Enter your name below to be forever enshrined into the hall of amazing!")
         $(".introOutroUL").remove();
         $(".introOnlyP").remove();
         $(".introOutro").append(scoreForm);
@@ -179,6 +179,7 @@ scoreFormSubmit.on("click", function(event) {
 
     event.preventDefault();
     var name = $(".name-submit").val();
+    $(".introOutroP").hide();
     localStorage.setItem("Name", name);
     localStorage.setItem("Score", score);
     scoreForm.hide();
@@ -190,13 +191,13 @@ scoreFormSubmit.on("click", function(event) {
 $('.btnAnswer').on('click', function() {
 
     if (quiz[currentQ].correct ===  $(this).attr('name')) {
-        $("#outcome").html("Correct!  Nice job!");
+        $(".outcome").html("Correct!  Nice job!").attr("style", "color:#57876F");
         score = (score + 10 + timer);
         currentQ++;
         nextQuestion();
         $(".scoreBoard").html(score);      
     } else {
-        $("#outcome").html("Sorry, wrong answer")
+        $(".outcome").html("Sorry, wrong answer").attr("style", "color:#A92521");
         timer = timer - 10;
         currentQ++;
         nextQuestion();

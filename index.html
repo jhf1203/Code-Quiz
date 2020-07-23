@@ -29,15 +29,15 @@
             <span class="navbar-brand mb-0 h1 headerH1">Jim Faulkner | JavaScript Quiz</span>
           </nav>    </header>
   
-    <div class="introBox">
-        <h1>Welcome to my JavaScript quiz!</h1>
-        <p>In a minute, you'll be asked ten different questions regarding general JavaScript.  There are four answer choices for each question, just click on the one that you think is correct!  There are a couple of things to know:</p>
-        <ul>
+    <div class="introOutro">
+        <h1 class="introOutroH1">Welcome to my JavaScript quiz!</h1>
+        <p class="introOutroP">In a minute, you'll be asked ten different questions regarding general JavaScript.  There are four answer choices for each question, just click on the one that you think is correct!  There are a couple of things to know:</p>
+        <ul class="introOutroUL">
             <li><strong>Timer!</strong>  This is a timed quiz.  You'll have approximately 100 seconds to answer the questions given to you.</li>
             <li><strong>Scoring!</strong>  You will receive points for each question that you answer correctly.  The more time that's remaining when you correctly answer a question, the more points that answer will be worth!  Additionally, it's important to know that you can lose time by selecting the wrong answer.</li>
         </ul>
 
-        <p>Click the button below to get started.  Make sure you're ready!  The timer starts as soon as you click!</p>
+        <p class="introOnlyP">Click the button below to get started.  Make sure you're ready!  The timer starts as soon as you click!</p>
 
         <button type="button" class="btn btn-link btn-lg startBtn">Fire up the quiz!</button>
     </div>
@@ -50,18 +50,18 @@
         </div>
         <div class="row rowAnswer">
             <div class="col-md-6">
-                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer a">just some placeholder text</button>
+                <button name="A" type="button" class="btn btn-link btn-lg shadow-none btnAnswer a">just some placeholder text</button>
             </div>  
             <div class="col-md-6">
-                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer c">just some placeholder text</button>
+                <button type="button"  name="C" class="btn btn-link btn-lg shadow-none btnAnswer c">just some placeholder text</button>
             </div> 
         </div> 
         <div class="row rowAnswer">
             <div class="col-md-6">
-                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer b">just some placeholder text</button>
+                <button  name="B" type="button" class="btn btn-link btn-lg shadow-none btnAnswer b">just some placeholder text</button>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-link btn-lg shadow-none btnAnswer d">just some placeholder text</button> 
+                <button  name="D" type="button" class="btn btn-link btn-lg shadow-none btnAnswer d">just some placeholder text</button> 
             </div>
         </div>
         <div class="row rowStats">
@@ -78,10 +78,10 @@
             </div>
             <div class="col-md-2">
                 <div>
-                    <p class = "scoreBoard"><p>
+                    <p class ="scoreBoard"><p>
                 </div>
                 <div>
-                    <p class="timeLeft"></p>      
+                    <p class="timeLeftSpot"></p>      
                 </div>     
             </div>
         </div>

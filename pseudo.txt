@@ -82,6 +82,22 @@ startBtn.on("click" function() {
 
 }
 
+RGB values for palette:
+
+Dk Red:         680b26
+Vibrant Red:    A92521
+Lt YellowOrng:  FDB26E
+Dk YellowOrng:  D08242
+Lt Green:       57876F
+Bold Green:     57876F
+Pale Blue:      6895CC
+Std. Blue       16408A
+
+Bkgd White:     E0DEDF
+Text Black:     201b1f
+
+
+
 
 
     
